@@ -2,8 +2,8 @@
 
 namespace Codepotato\CashCalc;
 
-use Codepotato\CashCalc\Services\Service;
 use Sammyjo20\Saloon\Clients\MockClient;
+use Codepotato\CashCalc\Services\Service;
 use Codepotato\CashCalc\Services\ExampleService;
 use Sammyjo20\Saloon\Http\Auth\TokenAuthenticator;
 use Codepotato\CashCalc\Exceptions\ServiceFactoryException;

@@ -2,11 +2,11 @@
 
 namespace Codepotato\CashCalc\Services;
 
-use Codepotato\CashCalc\Requests\Clients\IndexClientsRequest;
-use Codepotato\CashCalc\Requests\Clients\ShowClientRequest;
-use Codepotato\CashCalc\Responses\CashCalcResponse;
 use Codepotato\CashCalc\Data\Example;
 use Sammyjo20\Saloon\Http\SaloonResponse;
+use Codepotato\CashCalc\Responses\CashCalcResponse;
+use Codepotato\CashCalc\Requests\Clients\ShowClientRequest;
+use Codepotato\CashCalc\Requests\Clients\IndexClientsRequest;
 
 class ClientService extends Service
 {

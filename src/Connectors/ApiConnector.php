@@ -2,11 +2,11 @@
 
 namespace Codepotato\CashCalc\Connectors;
 
-use Codepotato\CashCalc\Data\Config;
 use Codepotato\CashCalc\CashCalc;
+use Codepotato\CashCalc\Data\Config;
 use Sammyjo20\Saloon\Http\SaloonConnector;
-use Codepotato\CashCalc\Responses\CashCalcResponse;
 use Sammyjo20\Saloon\Traits\Plugins\AcceptsJson;
+use Codepotato\CashCalc\Responses\CashCalcResponse;
 use Sammyjo20\Saloon\Traits\Auth\RequiresTokenAuth;
 
 class ApiConnector extends SaloonConnector

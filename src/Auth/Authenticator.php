@@ -3,9 +3,8 @@
 namespace Codepotato\CashCalc\Auth;
 
 use Carbon\CarbonInterface;
-use Sammyjo20\Saloon\Http\Auth\AccessTokenAuthenticator;
 use Sammyjo20\Saloon\Http\SaloonRequest;
-use Sammyjo20\Saloon\Interfaces\AuthenticatorInterface;
+use Sammyjo20\Saloon\Http\Auth\AccessTokenAuthenticator;
 
 class Authenticator extends AccessTokenAuthenticator
 {

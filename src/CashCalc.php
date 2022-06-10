@@ -2,19 +2,15 @@
 
 namespace Codepotato\CashCalc;
 
-use Codepotato\CashCalc\Connectors\ApiConnector;
 use Codepotato\CashCalc\Data\Config;
-use Codepotato\CashCalc\Services\ClientService;
 use Codepotato\CashCalc\Services\Service;
-use Codepotato\CashCalc\Traits\AuthenticatesRequests;
 use Codepotato\CashCalc\Traits\MocksRequests;
-use Codepotato\CashCalc\Services\ExampleService;
-use Sammyjo20\Saloon\Clients\MockClient;
-use Sammyjo20\Saloon\Http\Auth\TokenAuthenticator;
-use Codepotato\CashCalc\Exceptions\AuthenticationException;
+use Codepotato\CashCalc\Services\ClientService;
+use Codepotato\CashCalc\Connectors\ApiConnector;
+use Codepotato\CashCalc\Traits\AuthenticatesRequests;
 
 /**
- * @property ExampleService example
+ * @property ClientService clients
  */
 class CashCalc
 {

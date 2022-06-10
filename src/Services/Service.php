@@ -4,8 +4,8 @@ namespace Codepotato\CashCalc\Services;
 
 use Codepotato\CashCalc\Data\Config;
 use Sammyjo20\Saloon\Clients\MockClient;
-use Sammyjo20\Saloon\Http\RequestCollection;
 use Sammyjo20\Saloon\Http\SaloonConnector;
+use Sammyjo20\Saloon\Http\RequestCollection;
 
 class Service extends RequestCollection
 {

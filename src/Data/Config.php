@@ -13,8 +13,7 @@ class Config
     public function __construct(
         public string $baseUrl,
         public ?MockClient $mockClient = null,
-    )
-    {
+    ) {
         //
     }
 }

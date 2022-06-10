@@ -2,10 +2,10 @@
 
 namespace Codepotato\CashCalc\Requests\Clients;
 
-use Codepotato\CashCalc\Data\Responses\Client;
 use Sammyjo20\Saloon\Constants\Saloon;
 use Codepotato\CashCalc\Requests\Request;
 use Sammyjo20\Saloon\Http\SaloonResponse;
+use Codepotato\CashCalc\Data\Responses\Client;
 use Sammyjo20\Saloon\Traits\Plugins\CastsToDto;
 
 class ShowClientRequest extends Request

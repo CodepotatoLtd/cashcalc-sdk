@@ -3,10 +3,10 @@
 namespace Codepotato\CashCalc\Connectors;
 
 use Carbon\CarbonInterface;
-use Codepotato\CashCalc\Auth\Authenticator;
 use Sammyjo20\Saloon\Http\SaloonConnector;
-use Sammyjo20\Saloon\Interfaces\OAuthAuthenticatorInterface;
+use Codepotato\CashCalc\Auth\Authenticator;
 use Sammyjo20\Saloon\Traits\OAuth2\AuthorizationCodeGrant;
+use Sammyjo20\Saloon\Interfaces\OAuthAuthenticatorInterface;
 
 class AuthConnector extends SaloonConnector
 {
