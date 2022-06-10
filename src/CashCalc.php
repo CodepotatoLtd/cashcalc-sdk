@@ -4,6 +4,7 @@ namespace Codepotato\CashCalc;
 
 use Codepotato\CashCalc\Connectors\ApiConnector;
 use Codepotato\CashCalc\Data\Config;
+use Codepotato\CashCalc\Services\ClientService;
 use Codepotato\CashCalc\Services\Service;
 use Codepotato\CashCalc\Traits\AuthenticatesRequests;
 use Codepotato\CashCalc\Traits\MocksRequests;
@@ -23,7 +24,7 @@ class CashCalc
     /**
      * Define the base URL for the API
      */
-    public const API_BASE_URL = 'https://cashcalc.co.uk';
+    public const API_BASE_URL = 'https://cashcalc.co.uk/api/v3.2';
 
     /**
      * The API connector used to make requests.
@@ -45,7 +46,7 @@ class CashCalc
      * @var array
      */
     public static array $services = [
-        'example' => ExampleService::class,
+        'clients' => ClientService::class,
     ];
 
     /**

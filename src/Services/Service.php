@@ -15,6 +15,10 @@ class Service extends RequestCollection
     public function __construct(SaloonConnector $connector)
     {
         parent::__construct($connector);
+
+        if ($this->getMockClient() instanceof MockClient) {
+            $this->connector->withMockClient($this->getMockClient());
+        }
     }
 
     /**

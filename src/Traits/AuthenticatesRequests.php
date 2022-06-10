@@ -3,6 +3,7 @@
 namespace Codepotato\CashCalc\Traits;
 
 use Codepotato\CashCalc\Auth\Authenticator;
+use Sammyjo20\Saloon\Interfaces\AuthenticatorInterface;
 
 trait AuthenticatesRequests
 {
@@ -12,7 +13,7 @@ trait AuthenticatesRequests
      * @param Authenticator $authenticator
      * @return \Codepotato\CashCalc\CashCalc|AuthenticatesRequests
      */
-    public function withAuthentication(Authenticator $authenticator): self
+    public function withAuthentication(AuthenticatorInterface $authenticator): self
     {
         $this->apiConnector->withAuth($authenticator);
 
