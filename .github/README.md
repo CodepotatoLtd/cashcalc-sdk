@@ -5,7 +5,7 @@ Unofficial PHP SDK for the Cashcalc API.
 
 ## Authentication
 
-To get started, you will need to authorize your application with Cashcalc. They provide an OAuth2 Authorization Code flow. To get started, create a new instance of Codepotato\CashCalc\Connectors\CashCalcAuth; You are required to provide a Client ID and a Client Secret, and if you are generating an authorization URL, you also should provide this.
+To get started, you will need to authorize your application with Cashcalc. They provide an OAuth2 Authorization Code flow. To get started, create a new instance of `Codepotato\CashCalc\Connectors\CashCalcAuth` You are required to provide a Client ID and a Client Secret, and if you are generating an authorization URL, you also should provide the redirect uri.
 
 ```php
 $auth = new CashCalcAuth(
