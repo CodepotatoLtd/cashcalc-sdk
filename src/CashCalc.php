@@ -2,68 +2,61 @@
 
 namespace Codepotato\CashCalc;
 
-use Codepotato\CashCalc\Data\Config;
-use Codepotato\CashCalc\Services\Service;
-use Codepotato\CashCalc\Traits\MocksRequests;
+use Codepotato\CashCalc\Requests\Clients\ClientRequestCollection;
+use Codepotato\CashCalc\Responses\CashCalcResponse;
 use Codepotato\CashCalc\Services\ClientService;
-use Codepotato\CashCalc\Connectors\ApiConnector;
-use Codepotato\CashCalc\Traits\AuthenticatesRequests;
+use Sammyjo20\Saloon\Http\SaloonConnector;
+use Sammyjo20\Saloon\Traits\Auth\RequiresTokenAuth;
+use Sammyjo20\Saloon\Traits\Plugins\AcceptsJson;
 
 /**
- * @property ClientService clients
+ * @method ClientRequestCollection clients
  */
-class CashCalc
+class CashCalc extends SaloonConnector
 {
-    use MocksRequests;
-    use AuthenticatesRequests;
+    use AcceptsJson;
+    use RequiresTokenAuth;
 
     /**
      * Define the base URL for the API
-     */
-    public const API_BASE_URL = 'https://cashcalc.co.uk/api/v3.2';
-
-    /**
-     * The API connector used to make requests.
      *
-     * @var ApiConnector
+     * @var string
      */
-    protected ApiConnector $apiConnector;
+    protected string $apiBaseUrl = 'https://cashcalc.co.uk/api/v3.2';
 
     /**
-     * The CashCalc configuration.
+     * Custom response that all requests will return.
      *
-     * @var Config
+     * @var string|null
      */
-    protected Config $config;
+    protected ?string $response = CashCalcResponse::class;
 
     /**
-     * Provide all your CashCalc services here...
+     * The requests on the SDK.
      *
      * @var array
      */
-    public static array $services = [
-        'clients' => ClientService::class,
+    protected array $requests = [
+        'clients' => ClientRequestCollection::class,
     ];
+
+    /**
+     * Define the base URL of the API.
+     *
+     * @return string
+     */
+    public function defineBaseUrl(): string
+    {
+        return $this->apiBaseUrl;
+    }
 
     /**
      * @param string|null $baseUrl
      */
     public function __construct(string $baseUrl = null)
     {
-        $baseUrl ??= static::API_BASE_URL;
-
-        $this->config = new Config($baseUrl);
-        $this->apiConnector = new ApiConnector($this->config);
-    }
-
-    /**
-     * Proxy a property call to a service.
-     *
-     * @param string $methodName
-     * @return Service
-     */
-    public function __get(string $methodName): Service
-    {
-        return $this->apiConnector->{$methodName}();
+        if (isset($baseUrl)) {
+            $this->apiBaseUrl = $baseUrl;
+        }
     }
 }

@@ -1,14 +1,12 @@
 <?php
 
-namespace Codepotato\CashCalc\Services;
+namespace Codepotato\CashCalc\Requests\Clients;
 
-use Codepotato\CashCalc\Data\Example;
-use Sammyjo20\Saloon\Http\SaloonResponse;
 use Codepotato\CashCalc\Responses\CashCalcResponse;
-use Codepotato\CashCalc\Requests\Clients\ShowClientRequest;
-use Codepotato\CashCalc\Requests\Clients\IndexClientsRequest;
+use Sammyjo20\Saloon\Http\RequestCollection;
+use Sammyjo20\Saloon\Http\SaloonResponse;
 
-class ClientService extends Service
+class ClientRequestCollection extends RequestCollection
 {
     /**
      * Retrieve all clients.

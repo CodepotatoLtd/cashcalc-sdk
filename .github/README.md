@@ -5,7 +5,7 @@ Unofficial PHP SDK for the Cashcalc API.
 
 ## Authentication
 
-To get started, you will need to authorize your application with Cashcalc. They provide an OAuth2 Authorization Code flow. To get started, create a new instance of `Codepotato\CashCalc\Connectors\CashCalcAuth`. You are required to provide a Client ID and a Client Secret, and if you are generating an authorization URL, you also should provide the redirect uri.
+To get started, you will need to authorize your application with Cashcalc. They provide an OAuth2 Authorization Code flow. To get started, create a new instance of Codepotato\CashCalc\CashCalcAuth; You are required to provide a Client ID and a Client Secret, and if you are generating an authorization URL, you also should provide this.
 
 ```php
 $auth = new CashCalcAuth(
@@ -51,7 +51,7 @@ The most common method to retrieve data would be to use `$response->json();` whi
 For each API route, you can also convert the response into a DTO. For example, for clients
 
 ```php
-$response = $cashCalc->clients->all();
+$response = $cashCalc->clients()->all();
 
 $clients = $response->dto(); // Will return Codepotato\CashCalc\Data\Responses\Client
 ```

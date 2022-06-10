@@ -1,12 +1,12 @@
 <?php
 
-namespace Codepotato\CashCalc\Connectors;
+namespace Codepotato\CashCalc;
 
 use Carbon\CarbonInterface;
-use Sammyjo20\Saloon\Http\SaloonConnector;
 use Codepotato\CashCalc\Auth\Authenticator;
-use Sammyjo20\Saloon\Traits\OAuth2\AuthorizationCodeGrant;
+use Sammyjo20\Saloon\Http\SaloonConnector;
 use Sammyjo20\Saloon\Interfaces\OAuthAuthenticatorInterface;
+use Sammyjo20\Saloon\Traits\OAuth2\AuthorizationCodeGrant;
 
 class CashCalcAuth extends SaloonConnector
 {

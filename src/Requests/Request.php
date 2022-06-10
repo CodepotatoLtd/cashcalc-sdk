@@ -2,13 +2,13 @@
 
 namespace Codepotato\CashCalc\Requests;
 
+use Codepotato\CashCalc\CashCalc;
 use Sammyjo20\Saloon\Http\SaloonRequest;
-use Codepotato\CashCalc\Connectors\ApiConnector;
 
 class Request extends SaloonRequest
 {
     /**
      * @var string|null
      */
-    protected ?string $connector = ApiConnector::class;
+    protected ?string $connector = CashCalc::class;
 }
