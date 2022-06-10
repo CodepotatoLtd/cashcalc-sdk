@@ -1,9 +1,9 @@
 <?php
 
-namespace Codepotato\SDK\Requests\Example;
+namespace Codepotato\CashCalc\Requests\Example;
 
 use Sammyjo20\Saloon\Constants\Saloon;
-use Codepotato\SDK\Requests\Request;
+use Codepotato\CashCalc\Requests\Request;
 
 class ExampleRequest extends Request
 {

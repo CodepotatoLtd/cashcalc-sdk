@@ -1,6 +1,6 @@
 <?php
 
-namespace Codepotato\SDK\Data;
+namespace Codepotato\CashCalc\Data;
 
 use Sammyjo20\Saloon\Clients\MockClient;
 

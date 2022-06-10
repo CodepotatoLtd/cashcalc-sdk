@@ -1,21 +1,21 @@
 <?php
 
-namespace Codepotato\SDK;
+namespace Codepotato\CashCalc;
 
-use Codepotato\SDK\Connectors\ApiConnector;
-use Codepotato\SDK\Data\Config;
-use Codepotato\SDK\Services\Service;
-use Codepotato\SDK\Traits\AuthenticatesRequests;
-use Codepotato\SDK\Traits\MocksRequests;
-use Codepotato\SDK\Services\ExampleService;
+use Codepotato\CashCalc\Connectors\ApiConnector;
+use Codepotato\CashCalc\Data\Config;
+use Codepotato\CashCalc\Services\Service;
+use Codepotato\CashCalc\Traits\AuthenticatesRequests;
+use Codepotato\CashCalc\Traits\MocksRequests;
+use Codepotato\CashCalc\Services\ExampleService;
 use Sammyjo20\Saloon\Clients\MockClient;
 use Sammyjo20\Saloon\Http\Auth\TokenAuthenticator;
-use Codepotato\SDK\Exceptions\AuthenticationException;
+use Codepotato\CashCalc\Exceptions\AuthenticationException;
 
 /**
  * @property ExampleService example
  */
-class SDK
+class CashCalc
 {
     use MocksRequests;
     use AuthenticatesRequests;
@@ -23,7 +23,7 @@ class SDK
     /**
      * Define the base URL for the API
      */
-    public const API_BASE_URL = ':base_url';
+    public const API_BASE_URL = 'https://cashcalc.co.uk';
 
     /**
      * The API connector used to make requests.
@@ -33,14 +33,14 @@ class SDK
     protected ApiConnector $apiConnector;
 
     /**
-     * The SDK configuration.
+     * The CashCalc configuration.
      *
      * @var Config
      */
     protected Config $config;
 
     /**
-     * Provide all your SDK services here...
+     * Provide all your CashCalc services here...
      *
      * @var array
      */

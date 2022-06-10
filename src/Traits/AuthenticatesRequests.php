@@ -1,8 +1,8 @@
 <?php
 
-namespace Codepotato\SDK\Traits;
+namespace Codepotato\CashCalc\Traits;
 
-use Codepotato\SDK\Auth\Authenticator;
+use Codepotato\CashCalc\Auth\Authenticator;
 
 trait AuthenticatesRequests
 {
@@ -10,7 +10,7 @@ trait AuthenticatesRequests
      * Define an authenticator for requests.
      *
      * @param Authenticator $authenticator
-     * @return \Codepotato\SDK\SDK|AuthenticatesRequests
+     * @return \Codepotato\CashCalc\CashCalc|AuthenticatesRequests
      */
     public function withAuthentication(Authenticator $authenticator): self
     {

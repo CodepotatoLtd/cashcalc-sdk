@@ -1,11 +1,11 @@
 <?php
 
-namespace Codepotato\SDK\Exceptions;
+namespace Codepotato\CashCalc\Exceptions;
 
 use Sammyjo20\Saloon\Http\SaloonResponse;
 use Sammyjo20\Saloon\Exceptions\SaloonRequestException;
 
-class SDKRequestException extends SaloonRequestException
+class CashCalcRequestException extends SaloonRequestException
 {
     /**
      * Retrieve the response.

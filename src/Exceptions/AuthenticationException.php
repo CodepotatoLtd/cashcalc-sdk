@@ -1,6 +1,6 @@
 <?php
 
-namespace Codepotato\SDK\Exceptions;
+namespace Codepotato\CashCalc\Exceptions;
 
 use Exception;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Codepotato\SDK\Services;
+namespace Codepotato\CashCalc\Services;
 
 use Illuminate\Support\Collection;
-use Codepotato\SDK\Data\Example;
+use Codepotato\CashCalc\Data\Example;
 
 class ExampleService extends Service
 {

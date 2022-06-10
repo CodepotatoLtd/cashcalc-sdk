@@ -1,9 +1,9 @@
 <?php
 
-namespace Codepotato\SDK\Requests;
+namespace Codepotato\CashCalc\Requests;
 
 use Sammyjo20\Saloon\Http\SaloonRequest;
-use Codepotato\SDK\Connectors\ApiConnector;
+use Codepotato\CashCalc\Connectors\ApiConnector;
 
 class Request extends SaloonRequest
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Codepotato\SDK\Services;
+namespace Codepotato\CashCalc\Services;
 
-use Codepotato\SDK\Data\Config;
+use Codepotato\CashCalc\Data\Config;
 use Sammyjo20\Saloon\Clients\MockClient;
 use Sammyjo20\Saloon\Http\RequestCollection;
 use Sammyjo20\Saloon\Http\SaloonConnector;
@@ -18,7 +18,7 @@ class Service extends RequestCollection
     }
 
     /**
-     * Get the SDK config
+     * Get the CashCalc config
      *
      * @return Config
      */

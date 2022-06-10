@@ -1,12 +1,12 @@
 <?php
 
-namespace Codepotato\SDK;
+namespace Codepotato\CashCalc;
 
-use Codepotato\SDK\Services\Service;
+use Codepotato\CashCalc\Services\Service;
 use Sammyjo20\Saloon\Clients\MockClient;
-use Codepotato\SDK\Services\ExampleService;
+use Codepotato\CashCalc\Services\ExampleService;
 use Sammyjo20\Saloon\Http\Auth\TokenAuthenticator;
-use Codepotato\SDK\Exceptions\ServiceFactoryException;
+use Codepotato\CashCalc\Exceptions\ServiceFactoryException;
 
 class ServiceFactory
 {

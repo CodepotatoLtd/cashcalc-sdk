@@ -1,11 +1,11 @@
 <?php
 
-namespace Codepotato\SDK\Connectors;
+namespace Codepotato\CashCalc\Connectors;
 
-use Codepotato\SDK\Data\Config;
-use Codepotato\SDK\SDK;
+use Codepotato\CashCalc\Data\Config;
+use Codepotato\CashCalc\CashCalc;
 use Sammyjo20\Saloon\Http\SaloonConnector;
-use Codepotato\SDK\Responses\SDKResponse;
+use Codepotato\CashCalc\Responses\CashCalcResponse;
 use Sammyjo20\Saloon\Traits\Plugins\AcceptsJson;
 use Sammyjo20\Saloon\Traits\Auth\RequiresTokenAuth;
 
@@ -19,10 +19,10 @@ class ApiConnector extends SaloonConnector
      *
      * @var string|null
      */
-    protected ?string $response = SDKResponse::class;
+    protected ?string $response = CashCalcResponse::class;
 
     /**
-     * The SDK configuration.
+     * The CashCalc configuration.
      *
      * @var Config
      */
@@ -34,7 +34,7 @@ class ApiConnector extends SaloonConnector
     public function __construct(Config $config)
     {
         $this->config = $config;
-        $this->requests = SDK::$services;
+        $this->requests = CashCalc::$services;
     }
 
     /**
@@ -72,7 +72,7 @@ class ApiConnector extends SaloonConnector
     }
 
     /**
-     * Get the SDK config.
+     * Get the CashCalc config.
      *
      * @return Config
      */
