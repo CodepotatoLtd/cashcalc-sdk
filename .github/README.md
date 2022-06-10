@@ -44,6 +44,8 @@ For each SDK method, you will recieve a `CashCalcResponse`. This respose extends
 
 https://docs.saloon.dev/the-basics/responses
 
+The most common method to retrieve data would be to use `$response->json();` which will return an array of the data. However there are some powerful DTOs already written which are even better for developer experience since there is type-definitions.
+
 ## Data Transfer Objects
 
 For each API route, you can also convert the response into a DTO. For example, for clients
