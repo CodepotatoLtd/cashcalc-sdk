@@ -2,9 +2,9 @@
 
 namespace Codepotato\CashCalc\Requests\Clients;
 
-use Codepotato\CashCalc\Responses\CashCalcResponse;
-use Sammyjo20\Saloon\Http\RequestCollection;
 use Sammyjo20\Saloon\Http\SaloonResponse;
+use Sammyjo20\Saloon\Http\RequestCollection;
+use Codepotato\CashCalc\Responses\CashCalcResponse;
 
 class ClientRequestCollection extends RequestCollection
 {

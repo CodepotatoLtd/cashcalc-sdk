@@ -2,12 +2,11 @@
 
 namespace Codepotato\CashCalc;
 
-use Codepotato\CashCalc\Requests\Clients\ClientRequestCollection;
-use Codepotato\CashCalc\Responses\CashCalcResponse;
-use Codepotato\CashCalc\Services\ClientService;
 use Sammyjo20\Saloon\Http\SaloonConnector;
-use Sammyjo20\Saloon\Traits\Auth\RequiresTokenAuth;
 use Sammyjo20\Saloon\Traits\Plugins\AcceptsJson;
+use Codepotato\CashCalc\Responses\CashCalcResponse;
+use Sammyjo20\Saloon\Traits\Auth\RequiresTokenAuth;
+use Codepotato\CashCalc\Requests\Clients\ClientRequestCollection;
 
 /**
  * @method ClientRequestCollection clients
