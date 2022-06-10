@@ -8,7 +8,7 @@ use Codepotato\CashCalc\Auth\Authenticator;
 use Sammyjo20\Saloon\Traits\OAuth2\AuthorizationCodeGrant;
 use Sammyjo20\Saloon\Interfaces\OAuthAuthenticatorInterface;
 
-class AuthConnector extends SaloonConnector
+class CashCalcAuth extends SaloonConnector
 {
     use AuthorizationCodeGrant;
 
