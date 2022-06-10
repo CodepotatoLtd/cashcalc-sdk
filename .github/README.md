@@ -1,19 +1,55 @@
-# Codepotato SDK Template
-This template repository has been created to help you write SDKs easily. 
+# Cashcalc PHP SDK
+Unofficial PHP SDK for the Cashcalc API.
 
-## Getting Started
-1. Create a new repository and make sure to select this template
-2. Clone the repository locally
-3. Run the "php configure.php" locally to run through the setup
-4. Start building!
+(Work in progress!)
 
-## How to build SDKs
-We like to separate our SDKs into "services". In the base SDK.php class you have created for the
-project, you can define these services. Once you have defined the service, you can magically access
-then with property access. Like this:
+## Authentication
+
+To get started, you will need to authorize your application with Cashcalc. They provide an OAuth2 Authorization Code flow. To get started, create a new instance of Codepotato\CashCalc\Connectors\AuthConnector; You are required to provide a Client ID and a Client Secret, and if you are generating an authorization URL, you also should provide this.
 
 ```php
-<?php
+$auth = new AuthConnector(
+    clientId: 'my-client-id',
+    clientSecret: 'my-client-secret',
+    redirectUri: 'redirect-uri',
+);
+```
 
-$sdk->service->all();
+After you have created the auth connector, you can use it to follow the OAuth2 flow.
+
+```php
+$authorizationUrl = $auth->getAuthorizationUrl($scopes = [], $state = null);
+
+$authenticator = $auth->createAccessToken($code, $state = null, $expectedState = null);
+
+$refreshedAuthenticator = $auth->refreshAccessToken($authenticator|$refreshToken);
+```
+
+## Authenticating The SDK
+
+After you have retrieved the access tokens from the OAuth2 process, you can instantiate the SDK and start making requests!
+
+```php
+$cashCalc = new CashCalc;
+$cashCalc->withAuthentication($authenticator);
+
+// Now make requests!
+
+$response = $cashCalc->clients->all();
+```
+
+## Responses
+
+For each SDK method, you will recieve a `CashCalcResponse`. This respose extends `SaloonResponse` and has the following methods:
+
+https://docs.saloon.dev/the-basics/responses
+
+## Data Transfer Objects
+
+For each API route, you can also convert the response into a DTO. For example, for clients
+
+```php
+$response = $cashCalc->clients->all();
+
+$clients = $response->dto(); // Will return Codepotato\CashCalc\Data\Responses\Client
 ```
