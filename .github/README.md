@@ -1,7 +1,7 @@
+(Work in progress! Please use with caution)
+
 # Cashcalc PHP SDK
 Unofficial PHP SDK for the Cashcalc API.
-
-(Work in progress!)
 
 ## Authentication
 
